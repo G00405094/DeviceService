@@ -4,7 +4,7 @@ import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
-@FeignClient(name = "automation-service", url = "http://localhost:8081")
+@FeignClient(name = "automation-service", url = "http://automation-service:8081")
 public interface AutomationServiceClient {
     @PostMapping("/automation")
     String someDetails(@RequestBody DeviceDetails deviceDetails);
